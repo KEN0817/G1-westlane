@@ -1,0 +1,206 @@
+<!-- team.html              # 做伙揪團 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    @@include("html/linkCdn.html")
+    @@loop('html/csslink.html',[
+    {"csslink" : "css/style.css"}
+    ])
+    @@loop('html/jsLink.html',[
+    {"jsLink" : "js/team.js"}
+    ])
+</head>
+
+<body>
+    @@include("html/navBar.html")
+    <div id="team_join_window">
+        <div class="team_join_container">
+            <div class="team_list_box">
+                <div class="list_box_img">
+                    <p class="wanted_name">小帥帥</p>
+                    <div class="wanted_playerphoto">
+                        <img src="pic/team/FB_IMG_1566404286898.jpg">
+                    </div>
+                    <p class="wanted_teamname">帥帥隊驢子</p>
+                    <p class="wanted_bounty">$77777</p>
+                    <div class="wanted_mascot">
+                        <img src="pic/team/alpaca.svg">
+                    </div>
+                </div>
+                <div class="list_box_info">
+                    <p>隊伍名稱 : <span class="info_teamname">帥帥隊</span></p>
+                    <p>精神標語 :</p>
+                    <p class="info_teamslogan">只會往前，瘋狂入野!!只會往前，瘋狂入野!!只會往前，瘋狂入野!!</p>
+                    <p>人數 : <span class="info_teamcount">1</span></p>
+                </div>
+            </div>
+            <div class="join_button_container">
+                <button id="ok" class="btn">加入團隊</button>
+                <button id="no" class="btn">我不要</button>
+            </div>
+        </div>
+    </div>
+    <article class="team">
+        <h2 class="team_title">做伙揪團</h2>
+        <div class="team_bulletin_board">
+            <div class="img">
+                <img src="pic/team/Canopy.png" alt="揪團遮雨棚">
+            </div>
+            <div class="team_container">
+                <div class="team_option">
+                    <h4 id="team_join" class="team_option_select">加入隊伍</h4>
+                    <h4 id="team_joined">已加入隊伍</h4>
+                    <h4 id="team_create">創建隊伍</h4>
+                </div>
+                <div class="team_container_list">
+                    <div id="join" class="team_join_list">
+                        <div class="team_list_box">
+                            <div class="list_box_img">
+                                <p class="wanted_name">小帥帥</p>
+                                <div class="wanted_playerphoto">
+                                    <img src="pic/team/FB_IMG_1566404286898.jpg">
+                                </div>
+                                <p class="wanted_teamname">帥帥隊驢子</p>
+                                <p class="wanted_bounty">$77777</p>
+                                <div class="wanted_mascot">
+                                    <img src="pic/team/alpaca.svg">
+                                </div>
+                            </div>
+                            <div class="list_box_info">
+                                <p>隊伍名稱 : <span class="info_teamname">帥帥隊</span></p>
+                                <p>精神標語 :</p>
+                                <p class="info_teamslogan">只會往前，瘋狂入野!!只會往前，瘋狂入野!!只會往前，瘋狂入野!!</p>
+                                <p>人數 : <span class="info_teamcount">1</span></p>
+                            </div>
+                        </div>
+                        <div class="team_list_box">
+                            <div class="list_box_img">
+                                <p class="wanted_name">小帥帥</p>
+                                <div class="wanted_playerphoto">
+                                    <img src="pic/team/FB_IMG_1566404442214.jpg">
+                                </div>
+                                <p class="wanted_teamname">帥帥隊</p>
+                                <p class="wanted_bounty">$77776</p>
+                                <div class="wanted_mascot">
+                                    <img src="pic/team/alpaca.svg">
+                                </div>
+                            </div>
+                            <div class="list_box_info">
+                                <p>隊伍名稱 : <span class="info_teamname">帥帥隊</span></p>
+                                <p>精神標語 :</p>
+                                <p class="info_teamslogan">只會往前，瘋狂入野!!只會往前，瘋狂入野!!只會往前，瘋狂入野!!</p>
+                                <p>人數 : <span class="info_teamcount">1</span></p>
+                            </div>
+                        </div>
+                        <div class="team_list_box">
+                            <div class="list_box_img">
+                                <p class="wanted_name">小帥帥</p>
+                                <div class="wanted_playerphoto">
+                                    <img src="pic/team/FB_IMG_1566404671794.jpg">
+                                </div>
+                                <p class="wanted_teamname">帥帥隊</p>
+                                <p class="wanted_bounty">$77777</p>
+                                <div class="wanted_mascot">
+                                    <img src="pic/team/alpaca.svg">
+                                </div>
+                            </div>
+                            <div class="list_box_info">
+                                <p>隊伍名稱 : <span class="info_teamname">帥帥隊</span></p>
+                                <p>精神標語 :</p>
+                                <p class="info_teamslogan">只會往前，瘋狂入野!!只會往前，瘋狂入野!!只會往前，瘋狂入野!!</p>
+                                <p>人數 : <span class="info_teamcount">1</span></p>
+                            </div>
+                        </div>
+                        <div class="team_list_box">
+                            <div class="list_box_img">
+                                <p class="wanted_name">小帥帥</p>
+                                <div class="wanted_playerphoto">
+                                    <img src="pic/team/FB_IMG_1566404795035.jpg">
+                                </div>
+                                <p class="wanted_teamname">帥帥隊</p>
+                                <p class="wanted_bounty">$77777</p>
+                                <div class="wanted_mascot">
+                                    <img src="pic/team/alpaca.svg">
+                                </div>
+                            </div>
+                            <div class="list_box_info">
+                                <p>隊伍名稱 : <span class="info_teamname">帥帥隊</span></p>
+                                <p>精神標語 :</p>
+                                <p class="info_teamslogan">只會往前，瘋狂入野!!只會往前，瘋狂入野!!只會往前，瘋狂入野!!</p>
+                                <p>人數 : <span class="info_teamcount">1</span></p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="joined" class="team_joined_list">
+                        <div class="team_list_box">
+                            <div class="list_box_img">
+                                <p class="wanted_name">小帥帥</p>
+                                <div class="wanted_playerphoto">
+                                    <img src="pic/team/FB_IMG_1566404286898.jpg">
+                                </div>
+                                <p class="wanted_teamname">帥帥隊驢子</p>
+                                <p class="wanted_bounty">$77777</p>
+                                <div class="wanted_mascot">
+                                    <img src="pic/team/alpaca.svg">
+                                </div>
+                            </div>
+                            <div class="list_box_info">
+                                <p>隊伍名稱 : <span class="info_teamname">帥帥隊</span></p>
+                                <p>精神標語 :</p>
+                                <p class="info_teamslogan">只會往前，瘋狂入野!!只會往前，瘋狂入野!!只會往前，瘋狂入野!!</p>
+                                <p>人數 : <span class="info_teamcount">1</span></p>
+                            </div>
+                        </div>
+                        <div class="team_list_box">
+                            <div class="list_box_img">
+                                <p class="wanted_name">小帥帥</p>
+                                <div class="wanted_playerphoto">
+                                    <img src="pic/team/FB_IMG_1566404286898.jpg">
+                                </div>
+                                <p class="wanted_teamname">帥帥隊驢子</p>
+                                <p class="wanted_bounty">$77777</p>
+                                <div class="wanted_mascot">
+                                    <img src="pic/team/alpaca.svg">
+                                </div>
+                            </div>
+                            <div class="list_box_info">
+                                <p>隊伍名稱 : <span class="info_teamname">帥帥隊</span></p>
+                                <p>精神標語 :</p>
+                                <p class="info_teamslogan">只會往前，瘋狂入野!!只會往前，瘋狂入野!!只會往前，瘋狂入野!!</p>
+                                <p>人數 : <span class="info_teamcount">1</span></p>
+                            </div>
+                        </div>
+                        <div class="team_list_box">
+                            <div class="list_box_img">
+                                <p class="wanted_name">小帥帥</p>
+                                <div class="wanted_playerphoto">
+                                    <img src="pic/team/FB_IMG_1566404286898.jpg">
+                                </div>
+                                <p class="wanted_teamname">帥帥隊驢子</p>
+                                <p class="wanted_bounty">$77777</p>
+                                <div class="wanted_mascot">
+                                    <img src="pic/team/alpaca.svg">
+                                </div>
+                            </div>
+                            <div class="list_box_info">
+                                <p>隊伍名稱 : <span class="info_teamname">帥帥隊</span></p>
+                                <p>精神標語 :</p>
+                                <p class="info_teamslogan">只會往前，瘋狂入野!!只會往前，瘋狂入野!!只會往前，瘋狂入野!!</p>
+                                <p>人數 : <span class="info_teamcount">1</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <img src="pic/team/bulletin_board.svg" alt="揪團布告欄"> -->
+        </div>
+    </article>
+</body>
+
+</html>

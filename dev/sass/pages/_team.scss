@@ -1,0 +1,259 @@
+*{
+    // outline: blue 1px solid;
+}
+#team_join_window{
+    opacity: 0; 
+    width: 100%;
+    height: 100vh;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    position: fixed;
+    // margin: auto;
+    z-index: 5;
+    .join_button_container{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 7%;
+        :first-child{
+            margin-right:15%;
+        }
+        ::last-child{
+            margin-left:15%;
+        }
+    }
+    .team_join_container{
+        background-image: url("../pic/team/blue.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 45%; 
+        height: 61%;
+        position: absolute;
+        // background: #81A13E;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;  
+        margin: auto;
+        display: flex;
+        justify-content: space-aroeund;
+        flex-direction: column;
+        align-items: center;
+    }
+    .team_list_box{
+        margin: auto;
+        // clip-path: polygon(10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 0 50%);    
+        p{
+            font-family: 'Noto Sans T Chinese';
+            line-height: 16px;
+            margin: 5px;
+            font-size: 20px;
+        }
+        box-sizing: border-box;
+        width: 80%;
+        display: flex;   
+        justify-content: space-around;
+        .list_box_img{
+            position: relative;
+            background-size: 100% 100%;
+            background-image: url("../pic/team/wanted.svg");
+            width: 45%;
+            // background: skyblue;
+            text-align: center;
+            .wanted_name{
+                padding-top:24%; 
+                padding-bottom:2%    
+            }
+            .wanted_playerphoto{
+                width: 100%;
+                // height: 100px;
+                >img{
+                    width: 55%;  
+                    vertical-align: top;
+                }
+                // margin-bottom:5%; 
+            }
+            .wanted_teamname{
+                margin:0 auto ;
+                width: 60%;
+                position: relative;
+                z-index: 1;
+                background-position: top;
+                background-size: cover;
+                background-image: url("../pic/team/wanted_wood.svg");
+                margin-top:-2%;
+                padding: 2.5%;  
+                color: #fff;  
+            }
+            .wanted_bounty{
+                // margin-top:%;     
+                padding-bottom:12%;
+                color: #9E1916;
+            }
+            .wanted_mascot{
+                right: 3%;
+                bottom: 20%;
+                position: absolute;
+                z-index: 2;
+                img{
+                    vertical-align: top;
+                    width: 90%;
+                }
+            }
+        }
+        .list_box_info{
+            :first-child{
+                margin-top: 15%;
+                margin-bottom:10%; 
+            }
+            :last-child{
+                margin-top: 15%;
+            } 
+            .info_teamslogan{
+                line-height: 25px;
+            }                 
+            width: 40%;
+            margin-left:-7%; 
+            // background:salmon;
+        }
+    }
+}
+.team_bulletin_board{
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    position: relative;
+    >.img{
+        position: absolute;
+        top: -35px;
+        left: -30px;
+        right: -30px;
+            img{
+                width: 100%;
+                vertical-align: top;
+            }
+    }
+    .team_container{
+        background-image: url("../pic/team/bulletin_board.svg");
+        background-size:contain;
+        background-position: top;
+        background-repeat:no-repeat;
+        padding:50px 100px 200px 100px;
+        .team_option{
+            display: flex;
+            justify-content: space-around;
+            h4{
+                box-sizing: border-box;
+                background-image: linear-gradient(0,#DDEDB7 10%,#fff);
+                width: 35%;
+                padding: 15px 0px 10px 0px;
+                text-align:center;
+                border-radius: 20px 20px 0px 0px;
+                border:1px solid #81A13E;
+                margin-bottom:-1px; 
+                font-family: 'Noto Sans T Chinese';
+                cursor: pointer;
+                }
+            .team_option_select{
+                background-image: linear-gradient(0,#81A13E,#aacc60);
+                color:#FFF;
+            }
+        }
+        .team_container_list{
+            background: #DDEDB7;
+            .team_join_list{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            .team_joined_list{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            .team_list_box{
+                // clip-path: polygon(10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 0 50%); 
+                cursor: pointer;
+                &:hover{
+                    clip-path: polygon(100%); 
+                    box-shadow:2px 2px 10px #838383; 
+                }
+                //      
+                p{
+                    font-family: 'Noto Sans T Chinese';
+                    line-height: 16px;
+                    margin: 5px;
+                }
+                box-sizing: border-box;
+                background-image: url("../pic/team/bluelist.svg");
+                background-size: 100% 100%;
+                margin:1% 0%;
+                padding: 1% 0%;
+                width: 50%;
+                display: flex;
+                justify-content: space-evenly;
+                .list_box_img{
+                    position: relative;
+                    background-size: 100% 100%;
+                    background-image: url("../pic/team/wanted.svg");
+                    width: 40%;
+                    // background: skyblue;
+                    text-align: center;
+                    .wanted_name{
+                        padding-top:24%; 
+                        padding-bottom:2%    
+                    }
+                    .wanted_playerphoto{
+                        width: 100%;
+                        // height: 100px;
+                        >img{
+                            width: 55%;  
+                            vertical-align: top;
+                        }
+                        // margin-bottom:5%; 
+                    }
+                    .wanted_teamname{
+                        margin:0 auto ;
+                        width: 60%;
+                        position: relative;
+                        z-index: 1;
+                        background-position: top;
+                        background-size: cover;
+                        background-image: url("../pic/team/wanted_wood.svg");
+                        margin-top:-2%;
+                        padding: 2.5%;  
+                        color: #fff;  
+                    }
+                    .wanted_bounty{
+                        // margin-top:%;     
+                        padding-bottom:12%;
+                        color: #9E1916;
+                    }
+                    .wanted_mascot{
+                        right: -7%;
+                        bottom: 15%;
+                        position: absolute;
+                        z-index: 2;
+                        img{
+                            vertical-align: top;
+                            width: 75%;
+                        }
+                    }
+                }
+                .list_box_info{
+                    :first-child{
+                        margin-top: 15%;
+                        margin-bottom:10%; 
+                    }
+                    :last-child{
+                        margin-top: 15%;
+                    } 
+                    .info_teamslogan{
+                        line-height: 20px;
+                    }                 
+                    width: 35%;
+                    margin-left:-7%; 
+                    // background:salmon;
+                }
+            }
+        }
+    }
+}

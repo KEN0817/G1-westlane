@@ -1,0 +1,18 @@
+.section_footer{
+    background-image: url("../pic/footer/footer_bottom.png");
+    background-position: bottom;
+    background-size: cover;
+    padding-bottom: 0px;
+    .footer_copyright{
+        text-align: center;
+    }
+    .footer_social{
+        margin: auto;
+        text-align: center;
+        img{
+            width: 40px;
+            height: 40px;
+            margin:0 15px 10px;
+        }
+    }
+}

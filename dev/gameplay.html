@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    @@include("html/linkCdn.html")
+    @@loop('html/csslink.html',[
+    {"csslink" : "css/style.css"}
+    ])
+
+    @@loop('html/jsLink.html',[
+    {"jsLink" : "js/test.js"}
+    ])
+</head>
+<body>
+    @@include("html/navBar.html")
+        <h2 class="playticket_title">遊玩設施</h2>
+        <section class="section_playticket">
+            <h3 class="playticket_title">您的客製門票</h3>
+            <div class="playticket_ticket">
+                <div class="ticket_name"></div>
+                <div class="ticket_img"></div>
+                <div class="ticket_team"></div>
+                <div class="ticket_reward"></div>
+                <img class="ticket_mascot" src="" alt="">
+            </div>
+            <div class="playticket_buttom">
+                <div class="buttom_style buttom_entrance"></div>
+                <div class="buttom_style buttom_reward"></div>
+                <div class="buttom_style buttom_facility"></div>
+                <div class="buttom_style buttom_export"></div>
+            </div>
+        </section>
+        <section class="section_mission">
+            <h3 class="mission_title">經典任務進度</h3>
+            <div class="mission_progress">
+                <input type="checkbox" name="" id="" class="progress_check">
+                <div class="progress_box"></div>
+            </div>
+            <div class="mission_progress">
+                <input type="checkbox" name="" id="" class="progress_check">
+                <div class="progress_box"></div>
+            </div>
+            <div class="mission_progress">
+                <input type="checkbox" name="" id="" class="progress_check">
+                <div class="progress_box"></div>
+            </div>
+            <div class="mission_progress">
+                <input type="checkbox" name="" id="" class="progress_check">
+                <div class="progress_box"></div>
+            </div>
+        </section>
+    @@include("html/footer.html")
+
+</body>
+</html>

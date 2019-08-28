@@ -1,0 +1,65 @@
+@include rwd(desktop){
+    .section_title{
+        @include section_title;
+    }
+    .page_title{
+        @include page_title;
+    }
+    body{
+        background-image: url("/images/background/bgi.svg");
+        background-size: cover;
+        height: 1920px;
+    }
+    .ticket_news_wrap{
+        background-image: url(../images/background/ticket_news.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 625px;
+        height: 400px;
+        margin: auto;
+        .ticket_news_box{
+            width: 520px;
+            height: 320px;
+            margin: auto;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba($color: #FFE8CF, $alpha: 0.9);
+            border-radius: 50px;
+            padding: 40px;
+            box-sizing: border-box;
+            @at-root
+            .ticket_news_box_list{
+                font-size: 22px;
+                line-height: 26px;
+                border-bottom: dashed 2px #000;
+                padding: 10px;
+                display: flex;
+                align-items: center;
+                .triangle{
+                    width: 0;
+                    height: 0;
+                    border-left: solid 18px map-get( $colors_map , hover_base );
+                    border-top: solid 10px transparent;
+                    border-bottom: solid 10px transparent;
+                    margin-right: 30px;
+    
+                }
+                &:hover{
+                    color: map-get( $colors_map , hover_base );
+                    .triangle{
+                        border-left: solid 18px map-get( $colors_map , active_base );
+                    }
+                }
+            }
+        }
+    }
+}
+@include rwd(phone){
+    .section_title{
+        @include section_titleM;
+    }
+    .page_title{
+        @include page_titleM;
+    }
+}

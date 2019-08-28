@@ -1,0 +1,52 @@
+@import "base/reset";
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400,500,700|Noto+Sans:400,700&display=swap');
+// ===
+@import "plugin/bootstrap/bootstrap.scss";
+@import "plugin/jquery-ui.min.css";
+// ===
+@import "base/var";
+@import "mixins/mixin";
+@import "animation/animation";
+@import "components/buttons";
+// ===
+// ===
+@import "layout/grid";
+@import "layout/nav";
+@import "layout/header";
+@import "layout/footer";
+// ====
+@import "pages/activity";
+@import "pages/home";
+@import "pages/information";
+@import "pages/item";
+@import "pages/team";
+@import "pages/ticket";
+@import "pages/gameplay";
+// =====
+body {
+    background-image: url("../pic/navBar/111.png");
+    background-size: cover;
+}
+
+// ==========================================
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.btn{
+    @include btn{
+        display: inline-block;
+    }
+}
+
+.btn--active{
+    @include btn_active{
+        display: inline-block;
+    }
+}
+
+
+
+// ==================RWD======================

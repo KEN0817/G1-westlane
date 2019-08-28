@@ -1,0 +1,5 @@
+@import "../mixins/mixin";
+.playticket_title{
+    @include page_titleM;
+    margin-top: 200px;
+}
