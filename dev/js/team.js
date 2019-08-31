@@ -19,9 +19,17 @@ function join() {
     $id("no").innerText='我不要';
 }
 function joinInvitation(e){
+    // console.log(e.target);
+    // console.log(e.currentTarget)
+    // console.log(this);
     // console.log($id("team_join_window"));
     $id("team_join_window").style.opacity=1;
     $id("team_join_window").style.display="";
+    // var p = this;
+    // var p_prime = p.cloneNode(true);
+    // console.log(p_prime);
+    // var t=document.querySelector(".join_button_container");
+    // $id("team_join_window").firstChild.insertBefore(,t);
     $id("no").addEventListener("click",()=>{
         $id("team_join_window").style.display="none";
     },false);
@@ -79,5 +87,6 @@ window.addEventListener("load", function () {
     $id("team_create").addEventListener("click", create, false);
     join();
     // create();
+    // $id("team_join_window").style.opacity=1;
     $id("team_join_window").style.display="none";
 }, false);

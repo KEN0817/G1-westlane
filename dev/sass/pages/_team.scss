@@ -7,6 +7,8 @@ h4{
 p{
     font-family: 'Noto Sans T Chinese';
 }
+
+//join
 #team_join_window{
     opacity: 0; 
     width: 100%;
@@ -14,24 +16,35 @@ p{
     background-color: rgba($color: #000000, $alpha: 0.5);
     position: fixed;
     // margin: auto;
-    z-index: 5;
+    z-index: 10;
     .join_button_container{
         width: 100%;
         text-align: center;
         margin-bottom: 7%;
         :first-child{
             margin-right:15%;
+            @include rwd(phone){
+                margin-right:5%;
+            }
         }
         :last-child{
             margin-left:15%;
+            @include rwd(phone){
+                margin-left:5%;
+            }
         }
     }
     .team_join_container{
         background-image: url("../pic/team/blue.svg");
         background-size: 100% 100%;
         background-repeat: no-repeat;
-        width: 45%; 
-        height: 61%;
+        width: 45%;
+        height: 60%;
+        @include rwd(phone){
+            width: 96%;
+            height: 40%;
+        }
+        height: 60%;
         position: absolute;
         // background: #81A13E;
         top: 0;
@@ -52,9 +65,18 @@ p{
             line-height: 16px;
             margin: 5px;
             font-size: 20px;
+            @include rwd(phone){
+                margin: 0px;
+                line-height: 14px;
+                font-size: 14px;
+            }
         }
         box-sizing: border-box;
         width: 80%;
+        @include rwd(phone){
+            padding-top:7%;   
+            width: 100%;
+        }
         display: flex;   
         justify-content: space-around;
         .list_box_img{
@@ -93,15 +115,24 @@ p{
                 // margin-top:%;     
                 padding-bottom:12%;
                 color: #9E1916;
+                @include rwd(phone){
+                    padding-top:2%;
+                }
             }
             .wanted_mascot{
+                width: 25%;
                 right: 3%;
                 bottom: 20%;
                 position: absolute;
                 z-index: 2;
-                img{
+                @include rwd(phone){
+                    bottom: 22%;
+                    right: 2%;
+                    width: 25%;
+                }
+                img{ 
+                    width: 100%;
                     vertical-align: top;
-                    width: 90%;
                 }
             }
         }
@@ -115,6 +146,9 @@ p{
             } 
             .info_teamslogan{
                 line-height: 25px;
+                @include rwd(phone){
+                    line-height: 17px;
+                }
             }                 
             width: 40%;
             margin-left:-7%; 
@@ -122,31 +156,53 @@ p{
         }
     }
 }
+
+//board
 .team_bulletin_board{
     max-width: 1200px;
     width: 100%;
     margin: auto;
     position: relative;
-    >.img{
+    .img_Canopy{
         width: 100%;
-        position: absolute;
-        top: -20px;
+        // position: absolute;
+        // top: -20px;
         // left: -0px;
         // right: -30px;
-            img{
-                width: 100%;
-                vertical-align: top;
+        img{
+            width: 100%;
+            vertical-align: top;
+            position: relative;
+            z-index: 0;
+            top:2px;
+        }
+        
+    }
+    .img_Wooden_pile{
+        width: 100%;
+        img{
+            width: 100%;
+            vertical-align: top;
+            position: relative;
+            z-index: 1;
+            top:-2px;
             }
     }
     .team_container{
+        position: relative;
+        z-index: 5;
         box-sizing: border-box;
         width: 100%;
         margin: auto;
-        background-image: url("../pic/team/bulletin_board.svg");
-        background-size: 100%;
-        background-position: top;
+        background-image: url("../pic/team/做伙揪團＿0825_O-02.png");
+        background-size: 100% 100%;
+        // background-position: top;
         background-repeat:no-repeat;
-        padding:5% 10% 5% 10%;
+        padding:0% 12% 3% 12%;
+        @include rwd(phone){
+            padding:0% 5% 5% 5%;
+            // background-image: none;
+        }
         .team_option{
             width: 100%;
             display: flex;
@@ -161,8 +217,14 @@ p{
                 border:1px solid #81A13E;
                 margin-bottom:-1px; 
                 font-family: 'Noto Sans T Chinese';
+                font-size: 24px;
                 cursor: pointer;
+                @include rwd(phone){
+                    font-size: 18px;
+                    padding: 15px 0px 10px 0px;
+                    // cursor: none;
                 }
+            }
             .team_option_select{
                 background-image: linear-gradient(0,#81A13E,#aacc60);
                 color:#FFF;
@@ -172,6 +234,9 @@ p{
             width: 100%;
             margin: auto;
             background: #DDEDB7;
+            @include rwd(phone){
+                // background:none;
+            }
             .team_join_list{
                 display: flex;
                 flex-wrap: wrap;
@@ -185,21 +250,44 @@ p{
             .team_create_form{
                 h4{
                     padding-top: 2%;
+                    padding-bottom: 2%;
                     text-align: center;
                     font-family: 'Noto Sans T Chinese';
+                    font-size: 24px;
+                    @include rwd(phone){
+                        padding-top: 3%;
+                        font-size: 18px;
+                    }
                 }
                 // justify-content: space-between;
                 .slider{
                     position: relative;
                     margin: auto;
                     width: 70%;
+                    @include rwd(phone){
+                        width: 90%;
+                    }
                     .team_list_box{
                         width: 100%;
                         box-shadow: none;
                         // cursor: ;
                     }
-                    .wanted_mascot{
-                        width: 37%;
+                    .create_wanted_mascot{
+                        position: absolute;
+                        width: 25%;
+                        z-index: 1;
+                        bottom: 22%;
+                        // width:30%;
+                        right: 3%;
+                        @include rwd(phone){
+                            bottom: 25%;
+                            width:25%;
+                            right: 1%;
+                        }
+                        img{
+                            width: 100%;
+                            vertical-align: top;
+                        }
                     }
                     .owl-nav{
                         z-index: -1;
@@ -209,6 +297,10 @@ p{
                         width: 110%;
                         left: -5%;
                         bottom: 40%;
+                        @include rwd(phone){
+                            width: 120%;
+                            left: -10%;
+                        }
                         span{
                             color: #81A13E;
                             display: inline-block;
@@ -219,23 +311,40 @@ p{
                                 background-color: #81A13E;
                                 color: #FFF;
                             }
+                            @include rwd(phone){
+                                font-size: 40px;
+                                background-color: #81A13E;
+                                color: #FFF;
+                                // padding-bottom:0%;
+
+                            }
                         }
                     }
                 }
                 form{
                     width: 80%;
                     margin: auto;
+                    h4{
+                        font-size: 24px;
+                    }
                     p{
                         font-family: 'Noto Sans T Chinese';
                         padding: 1% 0;
                         font-size: 20px;
+                        @include rwd(phone){
+                            font-size: 16px;
+                            padding: 3% 0;
+                        }
                     }
                     .create_team_name{
                         width: 100%;
                         // margin: auto;
                         border-radius:20px;
-                        font-size: 35px;
+                        font-size: 30px;
                         font-family: 'Noto Sans T Chinese';
+                        @include rwd(phone){
+                            font-size: 18px;
+                        }
                     }
                     textarea{
                         width: 100%;
@@ -244,6 +353,9 @@ p{
                         font-size: 20px;
                         margin-bottom:3%;
                         font-family: 'Noto Sans T Chinese';
+                        @include rwd(phone){
+                            font-size: 18px;
+                        }
                     }
                     input{ 
                         display:block;
@@ -257,20 +369,31 @@ p{
                 // cursor: pointer;
                 &:hover{
                     clip-path: polygon(100%); 
-                    box-shadow:2px 2px 10px #555454; 
+                    box-shadow:2px 2px 10px #555454;
+                    // @include rwd(phone){
+
+                    // }
                 }
                 //      
                 p{
                     font-family: 'Noto Sans T Chinese';
                     line-height: 16px;
-                    margin: 5px;
+                    margin:5px;
+                    @include rwd(phone){
+                        font-size: 14px;
+                        line-height: 14px;
+                        // margin: 3px;
+                    }
                 }
                 box-sizing: border-box;
                 background-image: url("../pic/team/bluelist.svg");
                 background-size: 100% 100%;
                 margin:1% 0%;
                 padding: 1% 0%;
-                // width: 50%;
+                width: 50%;
+                @include rwd(phone){
+                    width: 100%
+                }
                 display: flex;
                 justify-content: space-evenly;
                 .list_box_img{
@@ -278,6 +401,9 @@ p{
                     background-size: 100% 100%;
                     background-image: url("../pic/team/wanted.svg");
                     width: 40%;
+                    @include rwd(phone){
+                        width: 50%;
+                    }
                     // background: skyblue;
                     text-align: center;
                     .wanted_name{
@@ -313,13 +439,18 @@ p{
                         color: #9E1916;
                     }
                     .wanted_mascot{
-                        right: -7%;
-                        bottom: 15%;
+                        right: -3%;
+                        bottom: 23%;
                         position: absolute;
                         z-index: 2;
+                        width: 30%;
+                        @include rwd(phone){
+                            right: 1%;
+                            width: 25%;
+                        }
                         img{
                             vertical-align: top;
-                            width: 75%;
+                            width: 100%;
                         }
                     }
                 }
@@ -336,31 +467,12 @@ p{
                     }                 
                     width: 35%;
                     margin-left:-7%; 
+                    @include rwd(phone){
+                        width: 45%;
+                        margin-left:-3%; 
+                    }
                     // background:salmon;
                 }
-            }
-        }
-    }
-}
-@include rwd(phone){
-    h4{
-        width: 100%;
-    }
-    .team_bulletin_board{
-        .team_container_list{
-            .team_list_box{
-                width: 100%;
-                // border: 1px solid #000;
-            }
-        }
-    }
-}
-@include rwd(desktop){
-    .team_bulletin_board{
-        .team_container_list{
-            .team_list_box{
-                width: 50%;
-                // border: 1px solid #df3b3b;
             }
         }
     }
